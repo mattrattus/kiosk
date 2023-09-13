@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+
+.top {
+  text-align: center;
+  font-family: "JetBrains Mono", monospace;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.default {
+  text-align: center;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.time {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.instrukcja {
+  text-align: center;
+  font-family: "JetBrains Mono", monospace;
+  color: red;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+}
