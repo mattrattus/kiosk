@@ -49,6 +49,7 @@
     </div>
     <div class="footer">
         <p>© 2023 IT.MATT</p>
+        <a href="https://seohost.pl/?ref=18897" rel="nofollow"><img src="img/seohost_1.png" alt="SeoHost.pl"></a>
     </div>
 </body>
 
