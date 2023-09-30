@@ -13,6 +13,11 @@ $data_start = $_SESSION["data_start"];
 $godzina_start = $_SESSION["godzina_start"];
 $data_koniec = $_SESSION["data_koniec"];
 $godzina_koniec = $_SESSION["godzina_koniec"];
+$suma_pracy = $_SESSION["suma_pracy"];
+$ilosc_dzien = $_SESSION["ilosc_dzien"];
+$ilosc_noc = $_SESSION["ilosc_noc"];
+
+
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +35,7 @@ $godzina_koniec = $_SESSION["godzina_koniec"];
     <br>
     <div class="default">
         <?php
-        $sql = "INSERT INTO godziny (username, praca_start, praca_koniec, data_start, data_koniec, godzina_start, godzina_koniec) VALUES ('$username','$praca_start', '$praca_koniec', '$data_start', '$data_koniec', '$godzina_start', '$godzina_koniec')";
+        $sql = "INSERT INTO godziny (username, praca_start, praca_koniec, data_start, data_koniec, godzina_start, godzina_koniec, suma_pracy, ilosc_dzien,  ilosc_noc) VALUES ('$username','$praca_start', '$praca_koniec', '$data_start', '$data_koniec', '$godzina_start', '$godzina_koniec', $suma_pracy, '$ilosc_dzien', '$ilosc_noc')";
         $result = mysqli_query($mysqli, $sql);
         if ($result) {
             echo "Godziny zostały zapisane w bazie danych." . "<br><br>";
