@@ -32,30 +32,47 @@ $_SESSION["data_koniec"] = $data_koniec;
 $_SESSION["godzina_start"] = $godzina_start;
 $_SESSION["godzina_koniec"] = $godzina_koniec;
 
-
-if ((in_array($g_start, $start_noc_po)) && (in_array($g_koniec, $koniec_dzien))) {
+if (in_array($g_start, $start_noc_po) && in_array($g_koniec, $koniec_dzien)) {
     $ilosc_noc = 6 - $g_start;
     $ilosc_dzien = $g_koniec - 6;
-} elseif ((in_array($g_start, $start_noc_po)) && (in_array($g_koniec, $koniec_noc_przed))) {
+} elseif (
+    in_array($g_start, $start_noc_po) &&
+    in_array($g_koniec, $koniec_noc_przed)
+) {
     $ilosc_noc_a = 6 - $g_start;
     $ilosc_noc_b = $g_koniec - 22;
     $ilosc_noc = $ilosc_noc_a + $ilosc_noc_b;
     $ilosc_dzien = 16;
-} elseif ((in_array($g_start, $start_dzien)) && (in_array($g_koniec, $koniec_dzien))) {
+} elseif (
+    in_array($g_start, $start_dzien) &&
+    in_array($g_koniec, $koniec_dzien)
+) {
     $ilosc_noc = 0;
     $ilosc_dzien = $g_koniec - $g_start;
-} elseif ((in_array($g_start, $start_dzien)) && (in_array($g_koniec, $koniec_noc_przed))) {
+} elseif (
+    in_array($g_start, $start_dzien) &&
+    in_array($g_koniec, $koniec_noc_przed)
+) {
     $ilosc_noc = $g_koniec - 22;
     $ilosc_dzien = 22 - $g_start;
-} elseif ((in_array($g_start, $start_dzien)) && (in_array($g_koniec, $koniec_noc_po))) {
+} elseif (
+    in_array($g_start, $start_dzien) &&
+    in_array($g_koniec, $koniec_noc_po)
+) {
     $ilosc_noc_a = 22 + $g_koniec;
     $ilosc_noc = $ilosc_noc_a - 20;
     $ilosc_dzien = 22 - $g_start;
-} elseif ((in_array($g_start, $start_noc_przed)) && (in_array($g_koniec, $koniec_noc_po))) {
+} elseif (
+    in_array($g_start, $start_noc_przed) &&
+    in_array($g_koniec, $koniec_noc_po)
+) {
     $ilosc_noc_a = 24 - $g_start;
     $ilosc_noc = $ilosc_noc_a + $g_koniec;
     $ilosc_dzien = 0;
-} elseif ((in_array($g_start, $start_noc_przed)) && (in_array($g_koniec, $koniec_dzien))) {
+} elseif (
+    in_array($g_start, $start_noc_przed) &&
+    in_array($g_koniec, $koniec_dzien)
+) {
     $ilosc_noc_a = 24 - $g_start;
     $ilosc_noc = $ilosc_noc_a + 6;
     $ilosc_dzien = $g_koniec - 6;
@@ -66,8 +83,6 @@ $suma_pracy = $ilosc_noc + $ilosc_dzien;
 $_SESSION["suma_pracy"] = $suma_pracy;
 $_SESSION["ilosc_dzien"] = $ilosc_dzien;
 $_SESSION["ilosc_noc"] = $ilosc_noc;
-
-
 ?>
 
 <!DOCTYPE html>

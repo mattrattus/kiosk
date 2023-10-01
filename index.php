@@ -45,7 +45,7 @@
     </div>
     <br><br><br><br><br>
     <div class="instrukcja">
-        <b>Uwaga! Kluczowa zmiana w zapisie godzin.</b>
+        <b>Uwaga! Nowe funkcjonalności.</b>
     </div>
     <div class="footer">
         <p>© 2023 IT.MATT</p>

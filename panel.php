@@ -31,7 +31,7 @@ $username = $_SESSION["username"];
         <br>
         <a href="godziny/dodaj.php">Dodać godziny</a>
         <br /><br />
-        <a href="godziny/godziny.php">Sprawdzić moje godziny</a>
+        <a href="godziny/godziny.php">Sprawdzić moje godziny</a> <span style="color: red;"><== już działa</span>
         <br /><br />
         <a href="kontakt.php">Wysłać wiadomość</a>
         <br /><br />
