@@ -2,7 +2,7 @@
 header("Content-Type: text/html; charset=utf-8");
 session_start();
 if (!isset($_SESSION["username"])) {
-    header("Location: dodaj.php");
+    header("Location: index.php");
     exit();
 }
 $username = $_SESSION["username"];
