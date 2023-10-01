@@ -129,13 +129,8 @@ $username = $_SESSION["username"];
   </div>
   <div class="default">
     <?php
-    echo "Wszystkie minuty - podajemy w normalnym układzie." . "<br>";
-    echo "Np. praca do 18:00 podajemy 18:00. Dla połówek np. 14:30 - to jest 14:30." .
-        "<br><br>";
+    echo "Jeżeli praca trwała DO północy (00:00:00) to jest TO NASTĘPNY DZIEŃ!" . "<br>";
     ?>
-    <div class="instrukcja">
-      <?php echo "NAJWAŻNIEJSZE - jeżeli praca trwała DO (!) północy (00:00:00) to jest TO NASTĘPNY DZIEŃ!"; ?>
-    </div>
     <br><br><br>
     <a href="/panel.php">Powrót do panelu</a>
   </div>
